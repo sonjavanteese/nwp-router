@@ -1,0 +1,131 @@
+body
+ {
+    width: 100vh;
+    height: 100vw;
+    margin: 0;
+	overflow: hidden;
+}
+#app {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    display: flex;
+    flex-direction:column;
+	overflow-y: scroll;
+}
+#app > main {
+    flex-shrink: 0;
+}
+#app > footer {
+    margin-top: auto;
+}
+:root {
+	--app-bg: #ffffff;
+	--app-color: #424656;
+	--app-color-disabled: #8890b1;
+	--app-bar-bgx: #255e54;
+	--app-bar-bg: #075985;;
+	--app-bar-color: #ffffff;
+	--app-bar-zindex: 30;
+	--app-bar-px-s: 1.5rem;
+	--app-bar-px-l: 2rem;
+	--app-bar-py: 0.2rem;
+	--app-bar-height: 66px;
+	--app-container-width: 576px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: serif;
+	font-weight: 500;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0.5rem;
+	--tw-text-opacity: 1;
+	color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+h1 {
+	font-size: 3.75rem;
+	line-height: 1;
+}
+h2 {
+	font-size: 3rem;
+	line-height: 1;
+}
+h3 {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+}
+h4 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+p {
+	font-family: Graphik, sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0.5rem;
+	--tw-text-opacity: 1;
+	color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+pre {
+	margin: 0 0 0 0;
+	padding: 0.5rem;
+	background-color: #f8f8f8;
+	color: #666;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+}
+.main {
+  padding-top: var(--app-bar-height);
+}
+.form-wrapp {
+	width: 100%;
+	max-width: 400px;
+	padding: 2rem;
+	margin: auto;
+}
+
+.lead {
+@apply text-2xl;
+}
+.select {
+@apply appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-200 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none;
+}
+.input {
+@apply appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none;
+}
+.input[disabled] {
+	@apply  text-gray-400 border-gray-100 focus:border-gray-200;
+}
+.label {
+@apply block mb-2 text-xs text-gray-700 uppercase tracking-wide font-bold;
+}
+
+.btn-blog {
+	@apply block w-full text-center;
+	color: var(--app-bar-color);
+	background-color: var(--app-bg);
+}
+.btn-blog[disabled] {
+@apply shadow-none cursor-not-allowed;
+color: var(--app-color-disabled);
+}
+
+.page-container {
+  @apply w-full mx-auto px-4;
+  max-width: var(--app-container-width);
+}
+.page-container.full {
+  @apply w-full h-full mx-auto px-4 py-4 shadow;
+  max-width: var(--app-container-width);
+}
